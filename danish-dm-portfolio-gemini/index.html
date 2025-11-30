@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohd Danish - Digital Marketing Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enable manual dark mode toggle
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: '#6366f1', // Indigo 500
+                        secondary: '#ec4899', // Pink 500
+                        dark: '#0f172a', // Slate 900
+                        darker: '#020617', // Slate 950
+                        light: '#f8fafc', // Slate 50
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out infinite 3s',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'scan': 'scan 4s linear infinite',
+                        'scroll-up': 'scrollUp 15s linear infinite',
+                        'dash': 'dash 20s linear infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        scan: {
+                            '0%': { left: '0%' },
+                            '100%': { left: '100%' },
+                        },
+                        scrollUp: {
+                            '0%': { transform: 'translateY(0)' },
+                            '100%': { transform: 'translateY(-100%)' },
+                        },
+                        dash: {
+                            to: { strokeDashoffset: '1000' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Theme Variables */
+        :root {
+            --bg-color: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(0, 0, 0, 0.05);
+            --card-bg: rgba(255, 255, 255, 0.6);
+            --card-hover: rgba(255, 255, 255, 0.9);
+            --blob-opacity: 0.4;
+        }
+
+        .dark {
+            --bg-color: #020617;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass-bg: rgba(15, 23, 42, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.05);
+            --card-bg: rgba(30, 41, 59, 0.4);
+            --card-hover: rgba(30, 41, 59, 0.6);
+            --blob-opacity: 0.3;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: var(--card-hover);
+            border-color: rgba(99, 102, 241, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15);
+        }
+
+        /* Social Buttons - Force Override for Reliability */
+        .social-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .social-btn:hover {
+            transform: translateY(-5px);
+            color: white !important;
+        }
+        .btn-linkedin:hover { background-color: #0077b5 !important; border-color: #0077b5 !important; }
+        .btn-email:hover { background-color: #ea4335 !important; border-color: #ea4335 !important; }
+        .btn-whatsapp:hover { background-color: #25D366 !important; border-color: #25D366 !important; }
+        .btn-instagram:hover { 
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important; 
+            border-color: #dc2743 !important; 
+        }
+        .btn-x:hover { background-color: #000000 !important; border-color: #000000 !important; }
+        .dark .btn-x:hover { background-color: #ffffff !important; border-color: #ffffff !important; color: #000 !important; }
+        .dark .btn-x:hover svg { fill: #000 !important; }
+
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(to right, #6366f1, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Typing Cursor */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+            color: var(--text-main);
+        }
+
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Chart Animations */
+        @keyframes grow-bar { from { height: 0%; opacity: 0; } to { height: var(--target-height); opacity: 1; } }
+        .bar-animate { animation: grow-bar 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+        @keyframes draw-chart { from { stroke-dashoffset: 200; } to { stroke-dashoffset: 0; } }
+        .chart-line-animate { stroke-dasharray: 200; stroke-dashoffset: 200; animation: draw-chart 2.5s ease-out forwards 0.5s; }
+
+        .blob-bg { opacity: var(--blob-opacity); transition: opacity 0.3s ease; }
+
+        /* 3D Tilt Container - Only active on desktop via JS check */
+        .tilt-container {
+            transform-style: preserve-3d;
+            perspective: 1200px;
+        }
+        .tilt-item {
+            transition: transform 0.15s ease-out;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+    </style>
+</head>
+<body class="antialiased relative">
+
+    <!-- Background Animation Blobs -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-3xl blob-bg animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-secondary/20 rounded-full mix-blend-screen filter blur-3xl blob-bg animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-purple-500/20 rounded-full mix-blend-screen filter blur-3xl blob-bg animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl md:text-2xl font-bold tracking-wider text-slate-800 dark:text-white">
+                PORT<span class="text-primary">FOLIO</span>.
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition text-xs uppercase tracking-widest font-medium">Home</a>
+                <a href="#about" class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition text-xs uppercase tracking-widest font-medium">About</a>
+                <a href="#platforms" class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition text-xs uppercase tracking-widest font-medium">Platforms</a>
+                <a href="#tools" class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition text-xs uppercase tracking-widest font-medium">Tools</a>
+                <a href="#experience" class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition text-xs uppercase tracking-widest font-medium">Experience</a>
+                <a href="#contact" class="px-6 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg hover:shadow-primary/50 transition transform hover:scale-105 text-sm">Hire Me</a>
+                
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="w-10 h-10 rounded-full bg-slate-200 dark:bg-white/10 flex items-center justify-center text-slate-700 dark:text-yellow-300 transition hover:bg-slate-300 dark:hover:bg-white/20 focus:outline-none">
+                    <i class="fa-solid fa-sun hidden dark:block"></i>
+                    <i class="fa-solid fa-moon block dark:hidden text-slate-700"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Actions -->
+            <div class="md:hidden flex items-center gap-3">
+                <button id="theme-toggle-mobile" class="w-9 h-9 rounded-full bg-slate-200 dark:bg-white/10 flex items-center justify-center text-slate-700 dark:text-yellow-300 transition focus:outline-none">
+                    <i class="fa-solid fa-sun hidden dark:block"></i>
+                    <i class="fa-solid fa-moon block dark:hidden"></i>
+                </button>
+                <button id="mobile-menu-btn" class="text-slate-800 dark:text-gray-300 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full glass border-t border-slate-200 dark:border-white/10 transition-all duration-300 origin-top">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#home" class="text-slate-700 dark:text-gray-300 hover:text-primary font-medium block border-b border-slate-200 dark:border-white/5 pb-2">Home</a>
+                <a href="#about" class="text-slate-700 dark:text-gray-300 hover:text-primary font-medium block border-b border-slate-200 dark:border-white/5 pb-2">About</a>
+                <a href="#platforms" class="text-slate-700 dark:text-gray-300 hover:text-primary font-medium block border-b border-slate-200 dark:border-white/5 pb-2">Platforms</a>
+                <a href="#tools" class="text-slate-700 dark:text-gray-300 hover:text-primary font-medium block border-b border-slate-200 dark:border-white/5 pb-2">Tools</a>
+                <a href="#experience" class="text-slate-700 dark:text-gray-300 hover:text-primary font-medium block border-b border-slate-200 dark:border-white/5 pb-2">Experience</a>
+                <a href="#contact" class="text-primary font-bold block">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative z-10 min-h-screen flex items-center justify-center pt-24 pb-12 tilt-container overflow-hidden">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <!-- Removed 'order-2 md:order-1' to let natural source order take over (Text first, then Image) -->
+            <div class="space-y-6 reveal active text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-slate-900 dark:text-white">
+                    Hi, I'm <br>
+                    <span class="text-gradient">Mohd Danish</span>
+                </h1>
+                <h2 class="text-xl sm:text-2xl md:text-3xl text-slate-600 dark:text-gray-400 font-light">
+                    I am a <span class="text-slate-800 dark:text-white font-semibold typing-cursor" id="typing-text"></span>
+                </h2>
+                <p class="text-slate-600 dark:text-gray-400 max-w-lg leading-relaxed mx-auto md:mx-0">
+                    A skilled digital marketing professional delivering measurable improvements in leads, cost efficiency, and ROI. I align marketing strategies with KPIs to achieve impactful results.
+                </p>
+                
+                <div class="flex gap-4 pt-4 justify-center md:justify-start">
+                    <a href="#experience" class="px-6 py-3 md:px-8 md:py-3 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-darker font-bold hover:opacity-90 transition shadow-lg text-sm md:text-base">View Experience</a>
+                    <a href="#contact" class="px-6 py-3 md:px-8 md:py-3 rounded-lg border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition backdrop-blur-sm text-sm md:text-base">Contact Me</a>
+                </div>
+
+                <!-- Animated Social Icons (Fixed Colors) -->
+                <div class="flex flex-col gap-3 pt-8 items-center md:items-start">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Connect:</span>
+                    <div class="flex items-center gap-4">
+                        <a href="https://www.linkedin.com/in/mohd-danish-a60703279" target="_blank" class="social-btn btn-linkedin relative w-12 h-12 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-gray-300 hover:!bg-[#0077b5] hover:!border-[#0077b5] hover:!text-white transition-all duration-300 shadow-sm group hover:-translate-y-2">
+                            <i class="fa-brands fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="mailto:danishshekh8947@gmail.com" class="social-btn btn-email relative w-12 h-12 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-gray-300 hover:!bg-[#ea4335] hover:!border-[#ea4335] hover:!text-white transition-all duration-300 shadow-sm group hover:-translate-y-2">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </a>
+                        <a href="#" class="social-btn btn-whatsapp relative w-12 h-12 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-gray-300 hover:!bg-[#25D366] hover:!border-[#25D366] hover:!text-white transition-all duration-300 shadow-sm group hover:-translate-y-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="#" class="social-btn btn-instagram relative w-12 h-12 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-gray-300 hover:!bg-gradient-to-tr hover:!from-[#f09433] hover:!via-[#dc2743] hover:!to-[#bc1888] hover:!border-[#dc2743] hover:!text-white transition-all duration-300 shadow-sm group hover:-translate-y-2">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="social-btn btn-x relative w-12 h-12 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-gray-300 hover:!bg-black hover:!border-black hover:!text-white dark:hover:!bg-white dark:hover:!border-white dark:hover:!text-black transition-all duration-300 shadow-sm group hover:-translate-y-2">
+                            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image: Pro Performance Marketing Dashboard -->
+            <!-- Removed 'order-1 md:order-2' so it naturally falls after the text on mobile, and grid handles side-by-side on desktop -->
+            <div class="relative flex justify-center items-center reveal min-h-[350px] md:h-[550px] perspective-1000 w-full mt-8 md:mt-0">
+                 <!-- Background Glow -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-secondary/30 rounded-full blur-[60px] md:blur-[100px] opacity-20 animate-pulse"></div>
+                
+                <!-- Main Dashboard Card -->
+                <div id="hero-dashboard" class="tilt-item relative w-full max-w-2xl aspect-[16/9] glass rounded-xl border border-slate-200 dark:border-white/10 shadow-2xl overflow-hidden bg-white/95 dark:bg-darker/95 backdrop-blur-xl flex flex-col transform-style-3d group text-xs md:text-sm">
+                    
+                    <!-- Header Bar -->
+                    <div class="h-8 md:h-10 border-b border-slate-200 dark:border-white/5 flex justify-between items-center px-4 bg-slate-50/50 dark:bg-white/5">
+                        <div class="flex items-center gap-2 md:gap-3">
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="h-3 w-px bg-slate-300 dark:bg-white/10"></div>
+                            <div class="flex gap-2 md:gap-4 hidden sm:flex">
+                                <span class="text-[9px] md:text-[10px] font-bold text-slate-800 dark:text-white border-b-2 border-primary pb-2.5 translate-y-1">Ads Manager</span>
+                                <span class="text-[9px] md:text-[10px] font-bold text-slate-400 cursor-pointer hover:text-slate-600 dark:hover:text-gray-300">Campaigns</span>
+                            </div>
+                        </div>
+                        <!-- Live Indicator -->
+                        <div class="flex items-center gap-2 px-2 py-0.5 bg-green-500/10 rounded border border-green-500/20">
+                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                            <span class="text-[8px] md:text-[9px] font-bold text-green-600 dark:text-green-400 font-mono">TRACKING_ACTIVE</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-1 overflow-hidden">
+                        <!-- Sidebar (Hidden on mobile) -->
+                        <div class="w-32 md:w-40 border-r border-slate-200 dark:border-white/5 bg-slate-50/30 dark:bg-white/5 hidden sm:flex flex-col">
+                            <div class="p-3 md:p-4">
+                                <p class="text-[8px] md:text-[9px] text-slate-400 font-bold uppercase tracking-wider mb-2 md:mb-3">Active Campaigns</p>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center justify-between text-[9px] md:text-[10px] text-primary bg-primary/10 px-2 py-1.5 rounded font-medium cursor-pointer">
+                                        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-green-500"></div> Q4_Scale</div>
+                                    </div>
+                                    <div class="flex items-center justify-between text-[9px] md:text-[10px] text-slate-500 dark:text-gray-400 px-2 py-1.5 hover:bg-slate-100 dark:hover:bg-white/5 rounded cursor-pointer transition">
+                                        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-green-500"></div> Retargeting</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-auto border-t border-slate-200 dark:border-white/5 flex-1 relative overflow-hidden">
+                                <div class="p-2 md:p-3 bg-slate-100/50 dark:bg-white/5 backdrop-blur-sm z-10 relative border-b border-slate-200 dark:border-white/5">
+                                    <p class="text-[8px] md:text-[9px] text-slate-400 font-bold uppercase">Attribution Log</p>
+                                </div>
+                                <div class="absolute inset-x-0 bottom-0 top-8 overflow-hidden">
+                                    <div class="animate-scroll-up flex flex-col p-2 md:p-3 gap-2">
+                                        <!-- Log Items -->
+                                        <div class="flex gap-2 items-start">
+                                            <div class="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-blue-500 mt-1 flex-shrink-0"></div>
+                                            <div><p class="text-[8px] md:text-[9px] text-slate-700 dark:text-gray-200 font-mono">Google Search → Purchase</p><p class="text-[7px] md:text-[8px] text-slate-400">ROAS: 4.5x</p></div>
+                                        </div>
+                                        <div class="flex gap-2 items-start">
+                                            <div class="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-purple-500 mt-1 flex-shrink-0"></div>
+                                            <div><p class="text-[8px] md:text-[9px] text-slate-700 dark:text-gray-200 font-mono">IG Story → Lead</p><p class="text-[7px] md:text-[8px] text-slate-400">CPL: $4.20</p></div>
+                                        </div>
+                                        <div class="flex gap-2 items-start">
+                                            <div class="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-blue-500 mt-1 flex-shrink-0"></div>
+                                            <div><p class="text-[8px] md:text-[9px] text-slate-700 dark:text-gray-200 font-mono">Search → Purchase</p><p class="text-[7px] md:text-[8px] text-slate-400">ROAS: 3.8x</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Content -->
+                        <div class="flex-1 flex flex-col p-3 md:p-5 gap-3 md:gap-5">
+                            
+                            <!-- KPI Row -->
+                            <div class="grid grid-cols-3 gap-2 md:gap-3">
+                                <div class="bg-slate-50 dark:bg-white/5 rounded-lg p-2 md:p-3 border border-slate-100 dark:border-white/5">
+                                    <p class="text-[8px] md:text-[9px] text-slate-400 font-bold uppercase mb-1">Ad Spend</p>
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-sm md:text-lg font-bold text-slate-800 dark:text-white font-mono counter" data-target="12.4">$0</span>
+                                        <span class="text-[10px] md:text-xs text-slate-800 dark:text-white font-mono">k</span>
+                                    </div>
+                                    <div class="h-0.5 w-full bg-slate-200 dark:bg-white/10 mt-2 rounded-full"><div class="h-full w-[45%] bg-red-400 rounded-full"></div></div>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-white/5 rounded-lg p-2 md:p-3 border border-slate-100 dark:border-white/5">
+                                    <p class="text-[8px] md:text-[9px] text-slate-400 font-bold uppercase mb-1">Revenue</p>
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-sm md:text-lg font-bold text-slate-800 dark:text-white font-mono counter" data-target="52.1">$0</span>
+                                        <span class="text-[10px] md:text-xs text-slate-800 dark:text-white font-mono">k</span>
+                                    </div>
+                                    <div class="h-0.5 w-full bg-slate-200 dark:bg-white/10 mt-2 rounded-full"><div class="h-full w-[78%] bg-green-500 rounded-full"></div></div>
+                                </div>
+                                <div class="bg-slate-50 dark:bg-white/5 rounded-lg p-2 md:p-3 border border-slate-100 dark:border-white/5">
+                                    <p class="text-[8px] md:text-[9px] text-slate-400 font-bold uppercase mb-1">ROAS</p>
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-sm md:text-lg font-bold text-green-500 font-mono counter" data-target="4.2">0</span>
+                                        <span class="text-[10px] md:text-xs text-green-500 font-mono">x</span>
+                                    </div>
+                                    <div class="h-0.5 w-full bg-slate-200 dark:bg-white/10 mt-2 rounded-full"><div class="h-full w-[92%] bg-primary rounded-full"></div></div>
+                                </div>
+                            </div>
+
+                            <div class="flex-1 flex gap-4 min-h-0">
+                                <!-- Main Chart -->
+                                <div class="flex-[2] bg-white dark:bg-white/5 rounded-lg border border-slate-100 dark:border-white/5 relative overflow-hidden group/chart flex flex-col">
+                                    <div class="px-3 py-2 border-b border-slate-100 dark:border-white/5 flex justify-between items-center">
+                                        <span class="text-[8px] md:text-[9px] font-bold text-slate-500 dark:text-gray-400 uppercase">Spend vs Revenue</span>
+                                    </div>
+                                    <div class="relative flex-1">
+                                        <div class="absolute top-0 bottom-0 w-px bg-primary/50 z-10 animate-scan pointer-events-none"></div>
+                                        <svg class="absolute inset-0 w-full h-full p-2" viewBox="0 0 100 50" preserveAspectRatio="none">
+                                            <defs>
+                                                <linearGradient id="revGradient" x1="0" x2="0" y1="0" y2="1">
+                                                    <stop offset="0%" stop-color="#22c55e" stop-opacity="0.2"/>
+                                                    <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <line x1="0" y1="12.5" x2="100" y2="12.5" stroke="#94a3b8" stroke-opacity="0.1" stroke-width="0.2" />
+                                            <line x1="0" y1="25" x2="100" y2="25" stroke="#94a3b8" stroke-opacity="0.1" stroke-width="0.2" />
+                                            <line x1="0" y1="37.5" x2="100" y2="37.5" stroke="#94a3b8" stroke-opacity="0.1" stroke-width="0.2" />
+                                            <path d="M0,45 Q15,40 25,42 T50,35 T75,30 T100,35" fill="none" stroke="#f87171" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M0,50 L0,35 Q15,25 25,15 T50,20 T75,5 T100,15 L100,50 Z" fill="url(#revGradient)" class="opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]" />
+                                            <path d="M0,35 Q15,25 25,15 T50,20 T75,5 T100,15" fill="none" stroke="#22c55e" stroke-width="1" class="chart-line-animate" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" />
+                                            <circle cx="75" cy="5" r="1.5" fill="white" stroke="#22c55e" stroke-width="1" class="animate-pulse-slow" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Right Panel (Funnel Health - Hidden on mobile) -->
+                                <div class="flex-1 flex flex-col gap-3 hidden sm:flex">
+                                    <div class="bg-slate-50 dark:bg-white/5 rounded-lg border border-slate-100 dark:border-white/5 p-3 flex flex-col gap-2 h-full">
+                                        <p class="text-[8px] text-slate-400 font-bold uppercase">Funnel Health</p>
+                                        <div class="flex-1 flex flex-col justify-between py-1">
+                                            <div class="relative">
+                                                <div class="flex justify-between text-[9px] mb-1"><span class="text-slate-600 dark:text-gray-300">Impression</span><span class="font-mono">120k</span></div>
+                                                <div class="w-full h-1 bg-slate-200 dark:bg-white/10 rounded-full"><div class="h-full w-full bg-blue-400 rounded-full"></div></div>
+                                            </div>
+                                            <div class="relative pl-2">
+                                                <div class="flex justify-between text-[9px] mb-1"><span class="text-slate-600 dark:text-gray-300">Clicks</span><span class="font-mono">4.5k</span></div>
+                                                <div class="w-full h-1 bg-slate-200 dark:bg-white/10 rounded-full"><div class="h-full w-[60%] bg-purple-400 rounded-full"></div></div>
+                                            </div>
+                                            <div class="relative pl-4">
+                                                <div class="flex justify-between text-[9px] mb-1"><span class="text-slate-600 dark:text-gray-300">Convert</span><span class="font-mono">320</span></div>
+                                                <div class="w-full h-1 bg-slate-200 dark:bg-white/10 rounded-full"><div class="h-full w-[30%] bg-green-500 rounded-full"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Stats: Winning Creative (Responsive Positioning) -->
+                <div class="absolute -bottom-4 -left-0 md:-left-4 glass px-3 py-2 md:px-4 rounded-lg border border-slate-200 dark:border-white/20 shadow-xl animate-float-delayed z-20 flex items-center gap-3 hidden sm:flex">
+                    <div class="w-8 h-8 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-500"><i class="fa-brands fa-instagram text-xs"></i></div>
+                    <div>
+                        <p class="text-[8px] text-slate-400 uppercase font-bold">Top Creative</p>
+                        <p class="text-xs font-bold text-slate-800 dark:text-white">Reel_v3.mp4</p>
+                    </div>
+                </div>
+
+                <!-- Floating Stats: Audience (Responsive Positioning) -->
+                <div class="absolute top-10 -right-0 md:-right-6 glass px-3 py-2 md:px-4 rounded-lg border border-slate-200 dark:border-white/20 shadow-xl animate-float z-20 flex items-center gap-3 hidden sm:flex">
+                    <div class="w-8 h-8 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-500"><i class="fa-solid fa-users text-xs"></i></div>
+                    <div>
+                        <p class="text-[8px] text-slate-400 uppercase font-bold">Audience</p>
+                        <p class="text-xs font-bold text-slate-800 dark:text-white">High Intent</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-slate-400 dark:text-gray-500 hover:text-primary dark:hover:text-white">
+            <i class="fa-solid fa-arrow-down text-xl"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">About <span class="text-primary">Me</span></h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center glass-card p-6 md:p-12 rounded-3xl reveal">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Strategic Marketer & Data Analyst</h3>
+                    <p class="text-slate-600 dark:text-gray-400 leading-relaxed">
+                        I am a Digital Marketing Associate at Plumm Ads with a strong background in managing and optimizing cross-platform campaigns. I hold a Bachelor of Arts from Delhi University and certifications in Google Analytics, Google Ads, and Digital Marketing.
+                    </p>
+                    <p class="text-slate-600 dark:text-gray-400 leading-relaxed">
+                        My expertise lies in stakeholder management, strategic thinking, and data analysis. I leverage tools like GA4, Search Console, and SEMrush to extract actionable insights that drive growth and maximize ROI.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 pt-4 text-slate-700 dark:text-white text-sm md:text-base">
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-graduation-cap text-secondary"></i><span class="font-medium">BA - Delhi Univ.</span></div>
+                        <div class="flex items-center gap-3"><i class="fa-brands fa-google text-secondary"></i><span class="font-medium">Ads Certified</span></div>
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-chart-pie text-secondary"></i><span class="font-medium">Data Driven</span></div>
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-users text-secondary"></i><span class="font-medium">Stakeholder Mgmt</span></div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white dark:bg-darker p-4 md:p-6 rounded-2xl border border-slate-200 dark:border-white/5 text-center hover:border-primary/50 transition shadow-sm">
+                        <h4 class="text-3xl md:text-4xl font-bold text-gradient mb-2">3+</h4>
+                        <p class="text-slate-500 dark:text-gray-400 text-xs md:text-sm">Years Experience</p>
+                    </div>
+                    <div class="bg-white dark:bg-darker p-4 md:p-6 rounded-2xl border border-slate-200 dark:border-white/5 text-center hover:border-primary/50 transition shadow-sm">
+                        <h4 class="text-3xl md:text-4xl font-bold text-gradient mb-2">25+</h4>
+                        <p class="text-slate-500 dark:text-gray-400 text-xs md:text-sm">Campaigns Managed</p>
+                    </div>
+                    <div class="bg-white dark:bg-darker p-4 md:p-6 rounded-2xl border border-slate-200 dark:border-white/5 text-center hover:border-primary/50 transition shadow-sm">
+                        <h4 class="text-3xl md:text-4xl font-bold text-gradient mb-2">2.5x</h4>
+                        <p class="text-slate-500 dark:text-gray-400 text-xs md:text-sm">Peak ROAS</p>
+                    </div>
+                    <div class="bg-white dark:bg-darker p-4 md:p-6 rounded-2xl border border-slate-200 dark:border-white/5 text-center hover:border-primary/50 transition shadow-sm">
+                        <h4 class="text-3xl md:text-4xl font-bold text-gradient mb-2">4+</h4>
+                        <p class="text-slate-500 dark:text-gray-400 text-xs md:text-sm">Certifications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Platforms Section -->
+    <section id="platforms" class="py-24 relative z-10 bg-slate-50/50 dark:bg-darker/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Ad <span class="text-primary">Platforms</span></h2>
+                <p class="text-slate-500 dark:text-gray-400">Campaigns I manage & optimize</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 reveal">
+                <!-- Google Ads -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://img.icons8.com/color/96/google-ads.png" alt="Google Ads" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Google Ads</span>
+                </div>
+                
+                <!-- Meta Ads -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://logo.clearbit.com/meta.com" alt="Meta Ads" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Meta Ads</span>
+                </div>
+                
+                <!-- Instagram Ads -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://logo.clearbit.com/instagram.com" alt="Instagram Ads" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Instagram Ads</span>
+                </div>
+                
+                <!-- Amazon Ads -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon Ads" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Amazon Ads</span>
+                </div>
+
+                <!-- LinkedIn Ads -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://logo.clearbit.com/linkedin.com" alt="LinkedIn Ads" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">LinkedIn Ads</span>
+                </div>
+
+                <!-- Microsoft Ads -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft Ads" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Microsoft Ads</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MarTech Tools Section -->
+    <section id="tools" class="py-24 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">MarTech <span class="text-primary">Tools</span></h2>
+                <p class="text-slate-500 dark:text-gray-400">Analytics, SEO & CRO Stack</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 reveal">
+                <!-- GA4 -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://img.icons8.com/color/96/google-analytics.png" alt="GA4" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Google Analytics 4</span>
+                </div>
+
+                <!-- GTM -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://img.icons8.com/color/96/google-tag-manager.png" alt="GTM" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Google Tag Manager</span>
+                </div>
+
+                <!-- Semrush -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://logo.clearbit.com/semrush.com" alt="Semrush" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Semrush</span>
+                </div>
+                
+                <!-- Ahrefs -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://logo.clearbit.com/ahrefs.com" alt="Ahrefs" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Ahrefs</span>
+                </div>
+                
+                <!-- SpyFu -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                         <img src="https://logo.clearbit.com/spyfu.com" alt="SpyFu" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">SpyFu</span>
+                </div>
+                
+                <!-- Hotjar -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://logo.clearbit.com/hotjar.com" alt="Hotjar" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Hotjar</span>
+                </div>
+                
+                <!-- Similarweb -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://logo.clearbit.com/similarweb.com" alt="Similarweb" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Similarweb</span>
+                </div>
+
+                <!-- Looker Studio -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
+                        <img src="https://img.icons8.com/color/96/google-data-studio.png" alt="Looker Studio" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Looker Studio</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Replaced Projects) -->
+    <section id="experience" class="py-24 relative z-10 bg-slate-50/50 dark:bg-darker/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Professional <span class="text-primary">Experience</span></h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Experience Card 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plumm Ads" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-slate-900/80 dark:bg-dark/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center gap-4">
+                            <span class="text-white font-bold">Sep 2025 - Present</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white">Plumm Ads</h3>
+                            <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">Associate</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Optimized 25+ performance campaigns across Google & Meta. Improved ROI for arbitrage funnels by 40% and reduced CPA by 32% via deep keyword research.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">Performance Marketing</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">Arbitrage</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">CPA Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal" style="transition-delay: 100ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Manthan Experts" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-slate-900/80 dark:bg-dark/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center gap-4">
+                            <span class="text-white font-bold">Jul 2024 - Aug 2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white">Manthan Experts</h3>
+                            <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">Specialist</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Managed 12+ cross-platform campaigns leading to a 40% increase in leads. Boosted campaign ROI by 20% through data-driven ad strategies and A/B testing.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">Lead Gen</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">Cross-Platform</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">ROI Boost</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal" style="transition-delay: 200ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Network Net" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-slate-900/80 dark:bg-dark/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center gap-4">
+                            <span class="text-white font-bold">Feb 2022 - Mar 2024</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white">Network Net</h3>
+                            <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">Executive</span>
+                        </div>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Executed 25+ Google & Meta campaigns, achieving up to 2.5x ROAS. Enhanced SEO rankings for 10+ service pages, driving a 60% increase in organic traffic.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">SEO</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">ROAS</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">Organic Traffic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block px-8 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition duration-300">Contact for Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative z-10 bg-gradient-to-t from-slate-200 to-transparent dark:from-black dark:to-transparent">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Get In <span class="text-primary">Touch</span></h2>
+                <p class="text-slate-500 dark:text-gray-400">Ready to boost your campaign performance? Let's connect.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 reveal">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4 text-slate-700 dark:text-white">
+                        <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-xl flex-shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold">Location</h4>
+                            <p class="text-slate-500 dark:text-gray-400">New Delhi, Delhi, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 text-slate-700 dark:text-white">
+                        <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-xl flex-shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold">Email</h4>
+                            <a href="mailto:danishshekh8947@gmail.com" class="text-slate-500 dark:text-gray-400 hover:text-primary transition">danishshekh8947@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 text-slate-700 dark:text-white">
+                        <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-xl flex-shrink-0">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold">LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/mohd-danish-a60703279" target="_blank" class="text-slate-500 dark:text-gray-400 hover:text-primary transition">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="glass-card p-8 rounded-2xl space-y-6" onsubmit="event.preventDefault(); alert('Message sent! (This is a demo)');">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm text-slate-500 dark:text-gray-400 mb-2">Name</label>
+                            <input type="text" class="w-full bg-white dark:bg-darker border border-slate-300 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-slate-500 dark:text-gray-400 mb-2">Email</label>
+                            <input type="email" class="w-full bg-white dark:bg-darker border border-slate-300 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition" placeholder="email@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-slate-500 dark:text-gray-400 mb-2">Subject</label>
+                        <input type="text" class="w-full bg-white dark:bg-darker border border-slate-300 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition" placeholder="Marketing Consultation">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-slate-500 dark:text-gray-400 mb-2">Message</label>
+                        <textarea rows="4" class="w-full bg-white dark:bg-darker border border-slate-300 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition" placeholder="How can I help you grow your business?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 rounded-lg hover:opacity-90 transition transform hover:-translate-y-1">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-slate-50 dark:bg-[#02040a] border-t border-slate-200 dark:border-white/5 pt-16 pb-8 overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full mix-blend-screen filter blur-3xl opacity-20 pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full mix-blend-screen filter blur-3xl opacity-20 pointer-events-none"></div>
+
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div class="space-y-4">
+                    <a href="#" class="text-2xl font-bold tracking-wider text-slate-800 dark:text-white block">
+                        PORT<span class="text-primary">FOLIO</span>.
+                    </a>
+                    <p class="text-slate-500 dark:text-gray-400 text-sm leading-relaxed">
+                        Data-driven digital marketer specializing in high-performance campaigns and analytics. Let's scale your business together.
+                    </p>
+                    <div class="flex gap-4">
+                        <!-- Small Social Links -->
+                        <a href="https://www.linkedin.com/in/mohd-danish-a60703279" target="_blank" class="text-slate-400 hover:text-primary transition"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                        <a href="mailto:danishshekh8947@gmail.com" class="text-slate-400 hover:text-primary transition"><i class="fa-solid fa-envelope text-lg"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-slate-800 dark:text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#home" class="text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> Home</a></li>
+                        <li><a href="#about" class="text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> About</a></li>
+                        <li><a href="#platforms" class="text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> Platforms</a></li>
+                        <li><a href="#experience" class="text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> Experience</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services/Tags -->
+                <div>
+                    <h4 class="text-slate-800 dark:text-white font-bold mb-6">Expertise</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-slate-200 dark:bg-white/5 text-slate-600 dark:text-gray-400 text-xs border border-slate-300 dark:border-white/10 hover:border-primary/50 transition cursor-default">Google Ads</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-200 dark:bg-white/5 text-slate-600 dark:text-gray-400 text-xs border border-slate-300 dark:border-white/10 hover:border-primary/50 transition cursor-default">Meta Ads</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-200 dark:bg-white/5 text-slate-600 dark:text-gray-400 text-xs border border-slate-300 dark:border-white/10 hover:border-primary/50 transition cursor-default">SEO</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-200 dark:bg-white/5 text-slate-600 dark:text-gray-400 text-xs border border-slate-300 dark:border-white/10 hover:border-primary/50 transition cursor-default">Analytics</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-200 dark:bg-white/5 text-slate-600 dark:text-gray-400 text-xs border border-slate-300 dark:border-white/10 hover:border-primary/50 transition cursor-default">CRO</span>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-slate-800 dark:text-white font-bold mb-6">Stay Updated</h4>
+                    <p class="text-slate-500 dark:text-gray-400 text-sm mb-4">Get the latest marketing insights directly to your inbox.</p>
+                    <form class="flex flex-col gap-3" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-lg bg-white dark:bg-white/5 border border-slate-300 dark:border-white/10 text-slate-800 dark:text-white focus:outline-none focus:border-primary transition text-sm w-full">
+                        <button class="px-4 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition shadow-lg shadow-primary/25 w-full sm:w-auto">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 dark:text-gray-500 text-sm">© <span id="copyright-year">2023</span> Mohd Danish. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-slate-500 dark:text-gray-500">
+                    <a href="#" class="hover:text-primary transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Dynamic Year ---
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+        // --- Theme Toggle Logic ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+        const html = document.documentElement;
+
+        // Function to set theme
+        const setTheme = (isDark) => {
+            if (isDark) {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+        };
+
+        // Initialize Theme based on storage or system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            setTheme(true);
+        } else {
+            setTheme(false);
+        }
+
+        // Event Listeners
+        const toggleTheme = () => {
+            const isDark = html.classList.contains('dark');
+            setTheme(!isDark);
+        };
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+        themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+
+        // --- Mobile Menu Toggle ---
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')){
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // --- Typing Effect ---
+        const textElement = document.getElementById('typing-text');
+        // Updated to only show requested title
+        const phrases = ['Performance Marketing Specialist'];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50; 
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end of phrase
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500; // Pause before new phrase
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        document.addEventListener('DOMContentLoaded', type);
+
+        // --- Scroll Reveal Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 150;
+
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        // Trigger once on load
+        revealOnScroll();
+
+        // --- Navbar Color Change on Scroll ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+                // Use CSS variable for background color via glass class logic
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // --- 3D Tilt Effect (Desktop Only) ---
+        const dashboard = document.getElementById('hero-dashboard');
+        const container = document.querySelector('.tilt-container');
+
+        if (dashboard && container && window.innerWidth > 768) {
+            container.addEventListener('mousemove', (e) => {
+                const { width, height, left, top } = container.getBoundingClientRect();
+                const x = e.clientX - left;
+                const y = e.clientY - top;
+                const centerX = width / 2;
+                const centerY = height / 2;
+                
+                // Rotation intensity
+                const rotateX = ((y - centerY) / centerY) * -5; // Max 5deg tilt
+                const rotateY = ((x - centerX) / centerX) * 5;
+
+                dashboard.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            container.addEventListener('mouseleave', () => {
+                dashboard.style.transform = 'perspective(1200px) rotateX(0) rotateY(0)';
+            });
+        }
+
+        // --- Number Counter Animation ---
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText.replace(/[^0-9.]/g, ''); // Extract number
+                    
+                    // Lower inc to slow and higher to slow
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        // Check if float or int
+                        if (target % 1 !== 0) {
+                             counter.innerText = (count + inc).toFixed(1);
+                        } else {
+                             counter.innerText = Math.ceil(count + inc);
+                        }
+                        
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Trigger counters when in view
+        const observerOptions = { threshold: 0.5 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        if(dashboard) observer.observe(dashboard);
+    </script>
+</body>
+</html>
