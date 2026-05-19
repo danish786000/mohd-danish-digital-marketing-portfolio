@@ -1,32 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth dark">
 <head>
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1233949338901358');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-413475978"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-413475978');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohd Danish - Digital Marketing Portfolio</title>
@@ -208,6 +182,19 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
         ::-webkit-scrollbar-track { background: var(--bg-color); }
         ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+
+        /* Project Cards - Enhanced hover with glow */
+        .project-card {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(99, 102, 241, 0.4) !important;
+            box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.25), 0 0 0 1px rgba(99, 102, 241, 0.1);
+        }
+        .dark .project-card:hover {
+            box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.35), 0 0 30px -5px rgba(139, 92, 246, 0.15), 0 0 0 1px rgba(99, 102, 241, 0.15);
+        }
     </style>
 </head>
 <body class="antialiased relative">
@@ -232,6 +219,7 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
                 <a href="#about" class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition text-xs uppercase tracking-widest font-medium">About</a>
                 <a href="#platforms" class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition text-xs uppercase tracking-widest font-medium">Platforms</a>
                 <a href="#tools" class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition text-xs uppercase tracking-widest font-medium">Tools</a>
+                <a href="#projects" class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition text-xs uppercase tracking-widest font-medium">Projects</a>
                 <a href="#experience" class="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition text-xs uppercase tracking-widest font-medium">Experience</a>
                 <a href="#contact" class="px-6 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg hover:shadow-primary/50 transition transform hover:scale-105 text-sm">Hire Me</a>
                 
@@ -261,6 +249,7 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
                 <a href="#about" class="text-slate-700 dark:text-gray-300 hover:text-primary font-medium block border-b border-slate-200 dark:border-white/5 pb-2">About</a>
                 <a href="#platforms" class="text-slate-700 dark:text-gray-300 hover:text-primary font-medium block border-b border-slate-200 dark:border-white/5 pb-2">Platforms</a>
                 <a href="#tools" class="text-slate-700 dark:text-gray-300 hover:text-primary font-medium block border-b border-slate-200 dark:border-white/5 pb-2">Tools</a>
+                <a href="#projects" class="text-slate-700 dark:text-gray-300 hover:text-primary font-medium block border-b border-slate-200 dark:border-white/5 pb-2">Projects</a>
                 <a href="#experience" class="text-slate-700 dark:text-gray-300 hover:text-primary font-medium block border-b border-slate-200 dark:border-white/5 pb-2">Experience</a>
                 <a href="#contact" class="text-primary font-bold block">Contact Me</a>
             </div>
@@ -296,7 +285,7 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
                         <a href="https://www.linkedin.com/in/mohd-danish-a60703279" target="_blank" class="social-btn btn-linkedin relative w-12 h-12 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-gray-300 hover:!bg-[#0077b5] hover:!border-[#0077b5] hover:!text-white transition-all duration-300 shadow-sm group hover:-translate-y-2">
                             <i class="fa-brands fa-linkedin-in text-xl"></i>
                         </a>
-                        <a href="mailto:danishshekh8947@gmail.com" class="social-btn btn-email relative w-12 h-12 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-gray-300 hover:!bg-[#ea4335] hover:!border-[#ea4335] hover:!text-white transition-all duration-300 shadow-sm group hover:-translate-y-2">
+                        <a href="/cdn-cgi/l/email-protection#bbdfdad5d2c8d3c8d3ded0d383828f8cfbdcd6dad2d795d8d4d6" class="social-btn btn-email relative w-12 h-12 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-gray-300 hover:!bg-[#ea4335] hover:!border-[#ea4335] hover:!text-white transition-all duration-300 shadow-sm group hover:-translate-y-2">
                             <i class="fa-solid fa-envelope text-xl"></i>
                         </a>
                         <a href="#" class="social-btn btn-whatsapp relative w-12 h-12 rounded-full bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-gray-300 hover:!bg-[#25D366] hover:!border-[#25D366] hover:!text-white transition-all duration-300 shadow-sm group hover:-translate-y-2">
@@ -405,7 +394,7 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
                                 <div class="bg-slate-50 dark:bg-white/5 rounded-lg p-2 md:p-3 border border-slate-100 dark:border-white/5">
                                     <p class="text-[8px] md:text-[9px] text-slate-400 font-bold uppercase mb-1">ROAS</p>
                                     <div class="flex items-baseline gap-1">
-                                        <span class="text-sm md:text-lg font-bold text-green-500 font-mono counter" data-target="4.2">420%</span>
+                                        <span class="text-sm md:text-lg font-bold text-green-500 font-mono counter" data-target="4.2">0</span>
                                         <span class="text-[10px] md:text-xs text-green-500 font-mono">x</span>
                                     </div>
                                     <div class="h-0.5 w-full bg-slate-200 dark:bg-white/10 mt-2 rounded-full"><div class="h-full w-[92%] bg-primary rounded-full"></div></div>
@@ -527,54 +516,43 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
                 <p class="text-slate-500 dark:text-gray-400">Campaigns I manage & optimize</p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 reveal">
-                <!-- Google Ads -->
+            <!-- FIXED: 5 correct platforms with embedded SVG logos (simple-icons) -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 reveal">
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://img.icons8.com/color/96/google-ads.png" alt="Google Ads" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#fff;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cGF0aCBmaWxsPSIjRkJCQzA0IiBkPSJNNy40MiAxNDAuOTdMNzIuNDIgMjguMzZjOC4zOC0xNC41IDIyLjctMTkuNjMgMzcuMjEtMTEuMjUgMTQuNSA4LjM4IDE5LjYzIDIyLjcgMTEuMjUgMzcuMjFMNTUuODggMTY3LjkzYy04LjM4IDE0LjUtMjIuNyAxOS42My0zNy4yMSAxMS4yNS0xNC41LTguMzktMTkuNjMtMjIuNzEtMTEuMjUtMzcuMjF6Ii8+PHBhdGggZmlsbD0iIzQyODVGNCIgZD0iTTE4NC41OCAxNDAuOTdMMTE5LjU5IDI4LjM2Yy04LjM4LTE0LjUtMjIuNzEtMTkuNjMtMzcuMjEtMTEuMjUtMTQuNTEgOC4zOC0xOS42MyAyMi43LTExLjI1IDM3LjIxbDY0Ljk5IDExMi42MWM4LjM4IDE0LjUgMjIuNyAxOS42MyAzNy4yMSAxMS4yNSAxNC41LTguMzkgMTkuNjItMjIuNzEgMTEuMjUtMzcuMjF6Ii8+PGNpcmNsZSBmaWxsPSIjMzRBODUzIiBjeD0iMzIuMzEiIGN5PSIxNTkuNjkiIHI9IjI3LjIxIi8+PC9zdmc+" alt="Google Ads" class="w-10 h-10 object-contain">
                     </div>
                     <span class="font-medium text-slate-700 dark:text-gray-300">Google Ads</span>
                 </div>
-                
-                <!-- Meta Ads -->
+
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://logo.clearbit.com/meta.com" alt="Meta Ads" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#0467DF;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TWV0YTwvdGl0bGU+PHBhdGggZD0iTTYuOTE1IDQuMDNjLTEuOTY4IDAtMy42ODMgMS4yOC00Ljg3MSAzLjExM0MuNzA0IDkuMjA4IDAgMTEuODgzIDAgMTQuNDQ5YzAgLjcwNi4wNyAxLjM2OS4yMSAxLjk3M2E2LjYyNCA2LjYyNCAwIDAgMCAuMjY1Ljg2IDUuMjk3IDUuMjk3IDAgMCAwIC4zNzEuNzYxYy42OTYgMS4xNTkgMS44MTggMS45MjcgMy41OTMgMS45MjcgMS40OTcgMCAyLjYzMy0uNjcxIDMuOTY1LTIuNDQ0Ljc2LTEuMDEyIDEuMTQ0LTEuNjI2IDIuNjYzLTQuMzJsLjc1Ni0xLjMzOS4xODYtLjMyNWMuMDYxLjEuMTIxLjE5Ni4xODMuM2wyLjE1MiAzLjU5NWMuNzI0IDEuMjEgMS42NjUgMi41NTYgMi40NyAzLjMxNCAxLjA0Ni45ODcgMS45OTIgMS4yMiAzLjA2IDEuMjIgMS4wNzUgMCAxLjg3Ni0uMzU1IDIuNDU1LS44NDNhMy43NDMgMy43NDMgMCAwIDAgLjgxLS45NzNjLjU0Mi0uOTM5Ljg2MS0yLjEyNy44NjEtMy43NDUgMC0yLjcyLS42ODEtNS4zNTctMi4wODQtNy40NS0xLjI4Mi0xLjkxMi0yLjk1Ny0yLjkzLTQuNzE2LTIuOTMtMS4wNDcgMC0yLjA4OC40NjctMy4wNTMgMS4zMDgtLjY1Mi41Ny0xLjI1NyAxLjI5LTEuODIgMi4wNS0uNjktLjg3NS0xLjMzNS0xLjU0Ny0xLjk1OC0yLjA1Ni0xLjE4Mi0uOTY2LTIuMzE1LTEuMzAzLTMuNDU0LTEuMzAzem0xMC4xNiAyLjA1M2MxLjE0NyAwIDIuMTg4Ljc1OCAyLjk5MiAxLjk5OSAxLjEzMiAxLjc0OCAxLjY0NyA0LjE5NSAxLjY0NyA2LjQgMCAxLjU0OC0uMzY4IDIuOS0xLjgzOSAyLjktLjU4IDAtMS4wMjctLjIzLTEuNjY0LTEuMDA0LS40OTYtLjYwMS0xLjM0My0xLjg3OC0yLjgzMi00LjM1OGwtLjYxNy0xLjAyOGE0NC45MDggNDQuOTA4IDAgMCAwLTEuMjU1LTEuOThjLjA3LS4xMDkuMTQxLS4yMjQuMjExLS4zMjcgMS4xMi0xLjY2NyAyLjExOC0yLjYwMiAzLjM1OC0yLjYwMnptLTEwLjIwMS41NTNjMS4yNjUgMCAyLjA1OC43OTEgMi42NzUgMS40NDYuMzA3LjMyNy43MzcuODcxIDEuMjM0IDEuNTc5bC0xLjAyIDEuNTY2Yy0uNzU3IDEuMTYzLTEuODgyIDMuMDE3LTIuODM3IDQuMzM4LTEuMTkxIDEuNjQ5LTEuODEgMS44MTctMi40ODYgMS44MTctLjUyNCAwLTEuMDM4LS4yMzctMS4zODMtLjc5NC0uMjYzLS40MjYtLjQ2NC0xLjEzLS40NjQtMi4wNDYgMC0yLjIyMS42My00LjUzNSAxLjY2LTYuMDg4LjQ1NC0uNjg3Ljk2NC0xLjIyNiAxLjUzMy0xLjUzM2EyLjI2NCAyLjI2NCAwIDAgMSAxLjA4OC0uMjg1eiIvPjwvc3ZnPg==" alt="Meta Ads" class="w-9 h-9 object-contain" style="filter:brightness(0) invert(1);">
                     </div>
                     <span class="font-medium text-slate-700 dark:text-gray-300">Meta Ads</span>
                 </div>
-                
-                <!-- Instagram Ads -->
+
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://logo.clearbit.com/instagram.com" alt="Instagram Ads" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#25D366;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+V2hhdHNBcHA8L3RpdGxlPjxwYXRoIGQ9Ik0xNy40NzIgMTQuMzgyYy0uMjk3LS4xNDktMS43NTgtLjg2Ny0yLjAzLS45NjctLjI3My0uMDk5LS40NzEtLjE0OC0uNjcuMTUtLjE5Ny4yOTctLjc2Ny45NjYtLjk0IDEuMTY0LS4xNzMuMTk5LS4zNDcuMjIzLS42NDQuMDc1LS4yOTctLjE1LTEuMjU1LS40NjMtMi4zOS0xLjQ3NS0uODgzLS43ODgtMS40OC0xLjc2MS0xLjY1My0yLjA1OS0uMTczLS4yOTctLjAxOC0uNDU4LjEzLS42MDYuMTM0LS4xMzMuMjk4LS4zNDcuNDQ2LS41Mi4xNDktLjE3NC4xOTgtLjI5OC4yOTgtLjQ5Ny4wOTktLjE5OC4wNS0uMzcxLS4wMjUtLjUyLS4wNzUtLjE0OS0uNjY5LTEuNjEyLS45MTYtMi4yMDctLjI0Mi0uNTc5LS40ODctLjUtLjY2OS0uNTEtLjE3My0uMDA4LS4zNzEtLjAxLS41Ny0uMDEtLjE5OCAwLS41Mi4wNzQtLjc5Mi4zNzItLjI3Mi4yOTctMS4wNCAxLjAxNi0xLjA0IDIuNDc5IDAgMS40NjIgMS4wNjUgMi44NzUgMS4yMTMgMy4wNzQuMTQ5LjE5OCAyLjA5NiAzLjIgNS4wNzcgNC40ODcuNzA5LjMwNiAxLjI2Mi40ODkgMS42OTQuNjI1LjcxMi4yMjcgMS4zNi4xOTUgMS44NzEuMTE4LjU3MS0uMDg1IDEuNzU4LS43MTkgMi4wMDYtMS40MTMuMjQ4LS42OTQuMjQ4LTEuMjg5LjE3My0xLjQxMy0uMDc0LS4xMjQtLjI3Mi0uMTk4LS41Ny0uMzQ3bS01LjQyMSA3LjQwM2gtLjAwNGE5Ljg3IDkuODcgMCAwMS01LjAzMS0xLjM3OGwtLjM2MS0uMjE0LTMuNzQxLjk4Mi45OTgtMy42NDgtLjIzNS0uMzc0YTkuODYgOS44NiAwIDAxLTEuNTEtNS4yNmMuMDAxLTUuNDUgNC40MzYtOS44ODQgOS44ODgtOS44ODQgMi42NCAwIDUuMTIyIDEuMDMgNi45ODggMi44OThhOS44MjUgOS44MjUgMCAwMTIuODkzIDYuOTk0Yy0uMDAzIDUuNDUtNC40MzcgOS44ODQtOS44ODUgOS44ODRtOC40MTMtMTguMjk3QTExLjgxNSAxMS44MTUgMCAwMDEyLjA1IDBDNS40OTUgMCAuMTYgNS4zMzUuMTU3IDExLjg5MmMwIDIuMDk2LjU0NyA0LjE0MiAxLjU4OCA1Ljk0NUwuMDU3IDI0bDYuMzA1LTEuNjU0YTExLjg4MiAxMS44ODIgMCAwMDUuNjgzIDEuNDQ4aC4wMDVjNi41NTQgMCAxMS44OS01LjMzNSAxMS44OTMtMTEuODkzYTExLjgyMSAxMS44MjEgMCAwMC0zLjQ4LTguNDEzWiIvPjwvc3ZnPg==" alt="WhatsApp Ads" class="w-9 h-9 object-contain" style="filter:brightness(0) invert(1);">
                     </div>
-                    <span class="font-medium text-slate-700 dark:text-gray-300">Instagram Ads</span>
-                </div>
-                
-                <!-- Amazon Ads -->
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon Ads" class="w-full h-full object-contain">
-                    </div>
-                    <span class="font-medium text-slate-700 dark:text-gray-300">Amazon Ads</span>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">WhatsApp Ads</span>
                 </div>
 
-                <!-- LinkedIn Ads -->
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://logo.clearbit.com/linkedin.com" alt="LinkedIn Ads" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#0A66C2;">
+                        <svg class="w-9 h-9" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                     </div>
                     <span class="font-medium text-slate-700 dark:text-gray-300">LinkedIn Ads</span>
                 </div>
 
-                <!-- Microsoft Ads -->
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft Ads" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#E1306C;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SW5zdGFncmFtPC90aXRsZT48cGF0aCBkPSJNNy4wMzAxLjA4NGMtMS4yNzY4LjA2MDItMi4xNDg3LjI2NC0yLjkxMS41NjM0LS43ODg4LjMwNzUtMS40NTc1LjcyLTIuMTIyOCAxLjM4NzctLjY2NTIuNjY3Ny0xLjA3NSAxLjMzNjgtMS4zODAyIDIuMTI3LS4yOTU0Ljc2MzgtLjQ5NTYgMS42MzY1LS41NTIgMi45MTQtLjA1NjQgMS4yNzc1LS4wNjg5IDEuNjg4Mi0uMDYyNiA0Ljk0Ny4wMDYyIDMuMjU4Ni4wMjA2IDMuNjY3MS4wODI1IDQuOTQ3My4wNjEgMS4yNzY1LjI2NCAyLjE0ODIuNTYzNSAyLjkxMDcuMzA4Ljc4ODkuNzIgMS40NTczIDEuMzg4IDIuMTIyOC42Njc5LjY2NTUgMS4zMzY1IDEuMDc0MyAyLjEyODUgMS4zOC43NjMyLjI5NSAxLjYzNjEuNDk2MSAyLjkxMzQuNTUyIDEuMjc3My4wNTYgMS42ODg0LjA2OSA0Ljk0NjIuMDYyNyAzLjI1NzgtLjAwNjIgMy42NjgtLjAyMDcgNC45NDc4LS4wODE0IDEuMjgtLjA2MDcgMi4xNDctLjI2NTIgMi45MDk4LS41NjMzLjc4ODktLjMwODYgMS40NTc4LS43MiAyLjEyMjgtMS4zODgxLjY2NS0uNjY4MiAxLjA3NDUtMS4zMzc4IDEuMzc5NS0yLjEyODQuMjk1Ny0uNzYzMi40OTY2LTEuNjM2LjU1Mi0yLjkxMjQuMDU2LTEuMjgwOS4wNjkyLTEuNjg5OC4wNjMtNC45NDgtLjAwNjMtMy4yNTgzLS4wMjEtMy42NjY4LS4wODE3LTQuOTQ2NS0uMDYwNy0xLjI3OTctLjI2NC0yLjE0ODctLjU2MzMtMi45MTE3LS4zMDg0LS43ODg5LS43Mi0xLjQ1NjgtMS4zODc2LTIuMTIyOEMyMS4yOTgyIDEuMzMgMjAuNjI4LjkyMDggMTkuODM3OC42MTY1IDE5LjA3NC4zMjEgMTguMjAxNy4xMTk3IDE2LjkyNDQuMDY0NSAxNS42NDcxLjAwOTMgMTUuMjM2LS4wMDUgMTEuOTc3LjAwMTQgOC43MTguMDA3NiA4LjMxLjAyMTUgNy4wMzAxLjA4MzltLjE0MDIgMjEuNjkzMmMtMS4xNy0uMDUwOS0xLjgwNTMtLjI0NTMtMi4yMjg3LS40MDgtLjU2MDYtLjIxNi0uOTYtLjQ3NzEtMS4zODE5LS44OTUtLjQyMi0uNDE3OC0uNjgxMS0uODE4Ni0uOS0xLjM3OC0uMTY0NC0uNDIzNC0uMzYyNC0xLjA1OC0uNDE3MS0yLjIyOC0uMDU5NS0xLjI2NDUtLjA3Mi0xLjY0NDItLjA3OS00Ljg0OC0uMDA3LTMuMjAzNy4wMDUzLTMuNTgzLjA2MDctNC44NDguMDUtMS4xNjkuMjQ1Ni0xLjgwNS40MDgtMi4yMjgyLjIxNi0uNTYxMy40NzYyLS45Ni44OTUtMS4zODE2LjQxODgtLjQyMTcuODE4NC0uNjgxNCAxLjM3ODMtLjkwMDMuNDIzLS4xNjUxIDEuMDU3NS0uMzYxNCAyLjIyNy0uNDE3MSAxLjI2NTUtLjA2IDEuNjQ0Ny0uMDcyIDQuODQ4LS4wNzkgMy4yMDMzLS4wMDcgMy41ODM1LjAwNSA0Ljg0OTUuMDYwOCAxLjE2OS4wNTA4IDEuODA1My4yNDQ1IDIuMjI4LjQwOC41NjA4LjIxNi45Ni40NzU0IDEuMzgxNi44OTUuNDIxNy40MTk0LjY4MTYuODE3Ni45MDA1IDEuMzc4Ny4xNjUzLjQyMTcuMzYxNyAxLjA1Ni40MTY5IDIuMjI2My4wNjAyIDEuMjY1NS4wNzM5IDEuNjQ1LjA3OTYgNC44NDguMDA1OCAzLjIwMy0uMDA1NSAzLjU4MzQtLjA2MSA0Ljg0OC0uMDUxIDEuMTctLjI0NSAxLjgwNTUtLjQwOCAyLjIyOTQtLjIxNi41NjA0LS40NzYzLjk2LS44OTU0IDEuMzgxNC0uNDE5LjQyMTUtLjgxODEuNjgxMS0xLjM3ODMuOS0uNDIyNC4xNjQ5LTEuMDU3Ny4zNjE3LTIuMjI2Mi40MTc0LTEuMjY1Ni4wNTk1LTEuNjQ0OC4wNzItNC44NDkzLjA3OS0zLjIwNDUuMDA3LTMuNTgyNS0uMDA2LTQuODQ4LS4wNjA4TTE2Ljk1MyA1LjU4NjRBMS40NCAxLjQ0IDAgMSAwIDE4LjM5IDQuMTQ0YTEuNDQgMS40NCAwIDAgMC0xLjQzNyAxLjQ0MjRNNS44Mzg1IDEyLjAxMmMuMDA2NyAzLjQwMzIgMi43NzA2IDYuMTU1NyA2LjE3MyA2LjE0OTMgMy40MDI2LS4wMDY1IDYuMTU3LTIuNzcwMSA2LjE1MDYtNi4xNzMzLS4wMDY1LTMuNDAzMi0yLjc3MS02LjE1NjUtNi4xNzQtNi4xNDk4LTMuNDAzLjAwNjctNi4xNTYgMi43NzEtNi4xNDk2IDYuMTczOE04IDEyLjAwNzdhNCA0IDAgMSAxIDQuMDA4IDMuOTkyMUEzLjk5OTYgMy45OTk2IDAgMCAxIDggMTIuMDA3NyIvPjwvc3ZnPg==" alt="Instagram Ads" class="w-9 h-9 object-contain" style="filter:brightness(0) invert(1);">
                     </div>
-                    <span class="font-medium text-slate-700 dark:text-gray-300">Microsoft Ads</span>
+                    <span class="font-medium text-slate-700 dark:text-gray-300">Instagram Ads</span>
                 </div>
+            </div>
             </div>
         </div>
     </section>
@@ -587,73 +565,289 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
                 <p class="text-slate-500 dark:text-gray-400">Analytics, SEO & CRO Stack</p>
             </div>
 
+            <!-- FIXED: All tool logos embedded as SVG data URIs (no broken images possible) -->
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 reveal">
-                <!-- GA4 -->
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://img.icons8.com/color/96/google-analytics.png" alt="GA4" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#E37400;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R29vZ2xlIEFuYWx5dGljczwvdGl0bGU+PHBhdGggZD0iTTIyLjg0IDIuOTk4MnYxNy45OTg3Yy4wMDg2IDEuNjQ3My0xLjMxOTcgMi45ODk3LTIuOTY3IDIuOTk4NGEyLjk4MDggMi45ODA4IDAgMDEtLjM2NzctLjAyMDhjLTEuNTI4LS4yMjYtMi42NDc3LTEuNTU1OC0yLjYxMDUtMy4xVjMuMTIwNGMtLjAzNjktMS41NDU4IDEuMDg1Ni0yLjg3NjIgMi42MTU3LTMuMSAxLjYzNjEtLjE5MTUgMy4xMTc4Ljk3OTYgMy4zMDkzIDIuNjE1OC4wMTQuMTIwMS4wMjA4LjI0MS4wMjAyLjM2MTl6TTQuMTMyNiAxOC4wNTQ4Yy0xLjY0MTcgMC0yLjk3MjYgMS4zMzEtMi45NzI2IDIuOTcyNkMxLjE2IDIyLjY2OTEgMi40OTA5IDI0IDQuMTMyNiAyNHMyLjk3MjYtMS4zMzA5IDIuOTcyNi0yLjk3MjYtMS4zMzEtMi45NzI2LTIuOTcyNi0yLjk3MjZ6bTcuODcyOC05LjAwOThjLS4wMTcxIDAtLjAzNDIgMC0uMDUxMy4wMDAzLTEuNjQ5NS4wOTA0LTIuOTI5MyAxLjQ3NC0yLjg5MSAzLjEyNTZ2Ny45ODQ2YzAgMi4xNjcuOTUzNSAzLjQ4MjUgMi4zNTA1IDMuNzYzIDEuNjExOC4zMjY2IDMuMTgzMi0uNzE1MiAzLjUwOTgtMi4zMjcuMDQtLjE5NzQuMDYtLjM5ODMuMDU5My0uNTk5OHYtOC45NTg1Yy4wMDMtMS42NDc0LTEuMzMtMi45ODUyLTIuOTc3My0yLjk4ODJ6Ii8+PC9zdmc+" alt="Google Analytics 4" class="w-9 h-9 object-contain" style="filter:brightness(0) invert(1);">
                     </div>
                     <span class="font-medium text-slate-700 dark:text-gray-300">Google Analytics 4</span>
                 </div>
 
-                <!-- GTM -->
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://img.icons8.com/color/96/google-tag-manager.png" alt="GTM" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#fff;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cGF0aCBmaWxsPSIjOEFCNEY4IiBkPSJNMTIyLjQgMTgwbC0zMC42LTMwLjYgNTguMi01OC4yIDMwLjYgMzAuNnoiLz48cGF0aCBmaWxsPSIjMjQ2RkRCIiBkPSJNMTIyLjUgNjUuNEw2NS40IDguM2MtNy4yLTcuMi0xOS03LjItMjYuMiAwTDguMyAzOS4yYy03LjIgNy4yLTcuMiAxOSAwIDI2LjJsNTcuMSA1Ny4xYzcuMiA3LjIgMTkgNy4yIDI2LjIgMGwzMS0zMWM3LjEtNy4xIDcuMS0xOC45LS4xLTI2LjF6Ii8+PHBhdGggZmlsbD0iIzI0NkZEQiIgZD0iTTE4My43IDkxLjNMMTAwLjcgOC4zYy03LjItNy4yLTE5LTcuMi0yNi4yIDBMNDMuNiAzOS4yYy03LjIgNy4yLTcuMiAxOSAwIDI2LjJsODMgODNjNy4yIDcuMiAxOSA3LjIgMjYuMiAwbDMwLjktMzAuOWM3LjItNy4yIDcuMi0xOC45IDAtMjYuMnoiLz48Y2lyY2xlIGZpbGw9IiMyNDZGREIiIGN4PSI5MS44IiBjeT0iMTcyLjUiIHI9IjE3LjUiLz48L3N2Zz4=" alt="Google Tag Manager" class="w-10 h-10 object-contain">
                     </div>
                     <span class="font-medium text-slate-700 dark:text-gray-300">Google Tag Manager</span>
                 </div>
 
-                <!-- Semrush -->
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://logo.clearbit.com/semrush.com" alt="Semrush" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#FF642D;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+U2VtcnVzaDwvdGl0bGU+PHBhdGggZD0iTTIwLjY5OCAxMS45MTFjMCAuNDQ0LS4yMjYuNTE2LS43OS41MTYtLjU5NiAwLS43MDYtLjEtLjc3LS41NTQtLjExOC0xLjE1Mi0uODk2LTIuMTMtMi4yMDEtMi4yNC0uNDE4LS4wMzQtLjUxOC0uMTktLjUxOC0uNzA2IDAtLjQ4LjA3NC0uNzA4LjQ0Ni0uNzA4IDIuMjY1LjAxIDMuODMzIDEuODMyIDMuODMzIDMuNjl2LjAwMnptMy4zIDBjMC0zLjQ1Ni0yLjMzOC03LjExLTcuNzQtNy4xMUg1LjUyYy0uMjE4IDAtLjM1NC4xMS0uMzU0LjMxIDAgLjEwOS4wODIuMjA5LjE1Ni4yNi4zODguMzEuOTcuNjU0IDEuNzMgMS4wMzYuNzQzLjM3MiAxLjMyMy42MTYgMS45MDMuODUyLjI0Ni4xLjMzNi4yMDguMzM2LjM0NCAwIC4xOS0uMTM2LjMwOC0uNC4zMDhILjM3MmMtLjI1NCAwLS4zNzIuMTY0LS4zNzIuMzI2IDAgLjEzNi4wNDQuMjU0LjE2Mi4zNzIuNjkuNzI2IDEuNzk2IDEuNTk2IDMuNCAyLjYwNCAxLjQ2Ni45MSAyLjk4IDEuNzQgNC41MzMgMi40OTIuMjM2LjExLjMwOC4yMzYuMzA4LjM3Mi0uMDA4LjE1NC0uMTI2LjI4LS40LjI4SDQuMWMtLjIxNiAwLS4zNDQuMTItLjM0NC4zIDAgLjEuMDguMjI2LjE5LjMyNi44ODguODA4IDIuMzExIDEuNjg4IDQuMjA3IDIuNDk0IDIuNTMgMS4wOCA1LjA5NCAxLjcyMSA3Ljk4IDEuNzIxIDUuNDY1IDAgNy44NjctNC4wODcgNy44NjctNy4yODlsLS4wMDIuMDAyem0tNy4xMzMgNS4xMDRjLTIuNzk0IDAtNS4xMzItMi4yNzYtNS4xMzItNS4xMTQgMC0yLjc5NCAyLjMzLTUuMDQgNS4xMzItNS4wNCAyLjg2MyAwIDUuMTExIDIuMjQgNS4xMTEgNS4wNGE1LjA4NiA1LjA4NiAwIDAgMS01LjExMSA1LjExNHoiLz48L3N2Zz4=" alt="Semrush" class="w-9 h-9 object-contain" style="filter:brightness(0) invert(1);">
                     </div>
                     <span class="font-medium text-slate-700 dark:text-gray-300">Semrush</span>
                 </div>
-                
-                <!-- Ahrefs -->
+
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://logo.clearbit.com/ahrefs.com" alt="Ahrefs" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#1B66C1;">
+                        <svg class="w-9 h-9" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="38" fill="white">Aℎ</text>
+                        </svg>
                     </div>
                     <span class="font-medium text-slate-700 dark:text-gray-300">Ahrefs</span>
                 </div>
-                
-                <!-- SpyFu -->
+
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                         <img src="https://logo.clearbit.com/spyfu.com" alt="SpyFu" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#fff;">
+                        <img src="https://www.google.com/s2/favicons?domain=spyfu.com&sz=256" alt="SpyFu" class="w-10 h-10 object-contain"
+                             onerror="this.onerror=null;this.src='https://logo.clearbit.com/spyfu.com';">
                     </div>
                     <span class="font-medium text-slate-700 dark:text-gray-300">SpyFu</span>
                 </div>
-                
-                <!-- Hotjar -->
+
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://logo.clearbit.com/hotjar.com" alt="Hotjar" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#FF3C00;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SG90amFyPC90aXRsZT48cGF0aCBkPSJNMTAuMTE5IDkuODE0QzEyLjg5OSA4LjI3IDE2LjcwNCA2LjE1NSAxNi43MDQgMGgtNC42MDljMCAzLjQ0NC0xLjY3NiA0LjM3NS00LjIxNCA1Ljc4NkM1LjEgNy4zMyAxLjI5NSA5LjQ0NCAxLjI5NSAxNS42aDQuNjFjMC0zLjQ0NCAxLjY3Ni00LjM3NiA0LjIxNC01Ljc4NnpNMTguMDk2IDguNGMwIDMuNDQ0LTEuNjc3IDQuMzc2LTQuMjE1IDUuNzg1LTIuNzc4IDEuNTQ0LTYuNTg1IDMuNjYtNi41ODUgOS44MTVoNC42MDljMC0zLjQ0NCAxLjY3Ni00LjM3NiA0LjIxNC01Ljc4NiAyLjc4LTEuNTQ0IDYuNTg2LTMuNjU4IDYuNTg2LTkuODE0aC00LjYwOXoiLz48L3N2Zz4=" alt="Hotjar" class="w-9 h-9 object-contain" style="filter:brightness(0) invert(1);">
                     </div>
                     <span class="font-medium text-slate-700 dark:text-gray-300">Hotjar</span>
                 </div>
-                
-                <!-- Similarweb -->
+
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://logo.clearbit.com/similarweb.com" alt="Similarweb" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#1B2C6E;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+U2ltaWxhcndlYjwvdGl0bGU+PHBhdGggZD0iTTIyLjA5OSA1Ljc4MWMtMS4yODMtMi0zLjE0LTMuNjctNS4yNy00LjUybC0uNjMtLjIxM2E3LjQzMyA3LjQzMyAwIDAgMC0yLjE1LS4zMzFjLTIuMzA3LjAxLTQuMTc1IDEuOTItNC4xNzUgNC4yNzVhNC4zIDQuMyAwIDAgMCAuODY3IDIuNjAybC0uMjYtLjM0MmMuMTI0LjE4Ni4yNi4zNy40MTcuNTU2LjY2My44MDIgMS42MDQgMS42MzUgMi44MjIgMi41OCAyLjk5OSAyLjMyIDQuOTQzIDQuMzc4IDUuMTA0IDYuOTMuMDM4LjM0NC4wNjIuNjk2LjA2MiAxLjA1MSAwIDEuMjk3LS4yODMgMi42Ny0uNzY0IDMuNjM1aC4wMDVzLS4yMDcuMzc3LS4wNzcuNDg3Yy4wNjYuMDU3LjIxLjEuNDYtLjA1M2ExMi4xMDQgMTIuMTA0IDAgMCAwIDMuNC0zLjMzIDEyLjExMSAxMi4xMTEgMCAwIDAgMi4wODgtNi42MzUgMTIuMDk4IDEyLjA5OCAwIDAgMC0xLjktNi42OTJ6bS05LjA5NiA4LjcxOC0xLjg3OC0xLjU1Yy0zLjkzNC0yLjg3LTUuOTgtNS45NjYtNC44NTktOS43ODNhOC43MyA4LjczIDAgMCAxIC4zNy0xLjAxNnYtLjAwNHMuMjc4LS41ODMtLjMyNy0uMjk1YTEyLjA2NyAxMi4wNjcgMCAwIDAtNi4yOTIgOS45NzUgMTIuMTEgMTIuMTEgMCAwIDAgMi4wNTMgNy40MjEgOS4zOTQgOS4zOTQgMCAwIDAgMi4xNTQgMi4xNjhINC4yMmM0LjE0OCAzLjA1MyA3LjcwNiAxLjQ0NiA3LjcwNiAxLjQ0NmguMDAzYTQuODQ3IDQuODQ3IDAgMCAwIDIuOTYyLTQuNDkyIDQuODU1IDQuODU1IDAgMCAwLTEuODg5LTMuODd6Ii8+PC9zdmc+" alt="Similarweb" class="w-9 h-9 object-contain" style="filter:brightness(0) invert(1);">
                     </div>
                     <span class="font-medium text-slate-700 dark:text-gray-300">Similarweb</span>
                 </div>
 
-                <!-- Looker Studio -->
                 <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center gap-4 group hover:bg-white/50 dark:hover:bg-white/5 transition">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-3 shadow-lg group-hover:scale-110 transition duration-300">
-                        <img src="https://img.icons8.com/color/96/google-data-studio.png" alt="Looker Studio" class="w-full h-full object-contain">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300" style="background:#4285F4;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TG9va2VyPC90aXRsZT48cGF0aCBkPSJNMTEuOTQ3NSAwYy0xLjE1OTguMDAyMS0yLjA5ODIuOTQ0LTIuMDk2IDIuMTAzOGEyLjEgMi4xIDAgMDAuMzU2IDEuMTY2bC44OTUtLjg5NTlhLjg4NC44ODQgMCAxMS41NjUuNTY0bC0uODk1Ljg5NWMuOTU5My42NDc4IDIuMjYyMS4zOTUzIDIuOTEtLjU2NC42NDc4LS45NTkzLjM5NTMtMi4yNjItLjU2NC0yLjkxQTIuMDk2IDIuMDk2IDAgMDAxMS45NDc1IDB6bS0uODM1IDYuMTEyOGEzLjI2MjkgMy4yNjI5IDAgMDAtLjY1My0xLjk2NWwtMS4xNjQgMS4xNjJhMS42NjcgMS42NjcgMCAwMS0uMzE4IDIuMDEybC42MzIgMS41NDQ5YTMuMjgxOSAzLjI4MTkgMCAwMDEuNTAzLTIuNzU0em0tMy4yNDk5IDEuNjY2aC0uMDNjLS45MjE3LjAwMDktMS42Njk3LS43NDU1LTEuNjcwNy0xLjY2NzMtLjAwMS0uOTIxNy43NDU0LTEuNjY5NyAxLjY2NzItMS42NzA3YTEuNjY5IDEuNjY5IDAgMDEuOTE5NS4yNzVsMS4xNTItMS4xNTJjLTEuNDA2OS0xLjE0MS0zLjQ3MjQtLjkyNTctNC42MTM1LjQ4MTFzLS45MjU3IDMuNDcyMy40ODEgNC42MTM1YTMuMjc5OSAzLjI3OTkgMCAwMDIuNzI3NS42NjUybC0uNjMzLTEuNTQzOXYtLjAwMXptNC4xMjc5IDEuMzM1OWMtLjcyOCAwLTEuNDUyLjEwNi0yLjE1LjMxNWwuOTIyIDIuMjUxOWMyLjY4NzItLjY4MTkgNS40MTg0Ljk0MzggNi4xMDAyIDMuNjMxLjY4MTggMi42ODczLS45NDM5IDUuNDE4NC0zLjYzMTEgNi4xMDAycy01LjQxODQtLjk0MzktNi4xMDAyLTMuNjMxYy0uNTY4Mi0yLjIzOTQuNDY1NS00LjU3NzQgMi41MDQxLTUuNjY0M2wtLjkxLTIuMjQ0OWMtMy42OTA4IDEuODA4LTUuMjE3MyA2LjI2NTctMy40MDkzIDkuOTU2N2wuMDAwNS4wMDFjMS44MDggMy42OTA5IDYuMjY1NyA1LjIxNzMgOS45NTY3IDMuNDA5M2wuMDAxLS4wMDA1YzMuNjkxMy0xLjgwNzEgNS4yMTg3LTYuMjY0NSAzLjQxMTYtOS45NTU4YTcuNDQxNyA3LjQ0MTcgMCAwMC02LjY4NjUtNC4xNjk2aC0uMDA4bC0uMDAxLjAwMXoiLz48L3N2Zz4=" alt="Looker Studio" class="w-9 h-9 object-contain" style="filter:brightness(0) invert(1);">
                     </div>
                     <span class="font-medium text-slate-700 dark:text-gray-300">Looker Studio</span>
                 </div>
             </div>
+            </div>
         </div>
     </section>
+
+    <!-- =============================================
+         NEW SECTION: PROJECTS / BRANDS I'VE WORKED WITH
+         Inserted before Experience section
+    ============================================= -->
+    <section id="projects" class="py-24 relative z-10 bg-slate-50/50 dark:bg-darker/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-6 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">Brands I've <span class="text-primary">Worked With</span></h2>
+                <p class="text-slate-500 dark:text-gray-400 max-w-xl mx-auto">Performance campaigns and results delivered across D2C, B2C & B2B brands</p>
+                <div class="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+
+                <!-- Card 1: Hayes London -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal project-card" style="transition-delay: 0ms;">
+                    <div class="relative h-32 overflow-hidden flex items-center justify-center" style="background:linear-gradient(135deg,#1a1a2e,#16213e);">
+                        <img src="https://www.google.com/s2/favicons?domain=www.hayeslondon.com&sz=256" data-domain="www.hayeslondon.com" alt="Hayes London"
+                             class="w-20 h-20 object-contain drop-shadow-lg" style="image-rendering:auto;"
+                             onerror="if(!this.dataset.step){this.dataset.step='1';this.src='https://logo.clearbit.com/'+this.dataset.domain;}else if(this.dataset.step==='1'){this.dataset.step='2';this.src='https://icons.duckduckgo.com/ip3/'+this.dataset.domain+'.ico';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                             loading="lazy">
+                        <div class="hidden w-20 h-20 items-center justify-center rounded-2xl text-white font-bold text-3xl">HL</div>
+                        <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-violet-500/30 text-violet-200 border border-violet-400/30">D2C</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white mb-3">Hayes London</h3>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Scaled Meta & Google Ads for premium UK shoe brand with advanced funnel optimization and creative A/B testing.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-600 dark:text-green-400">3.8x ROAS</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">CPA -32%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Kaaya Ayurveda -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal project-card" style="transition-delay: 50ms;">
+                    <div class="relative h-32 overflow-hidden flex items-center justify-center" style="background:linear-gradient(135deg,#14532d,#166534);">
+                        <img src="https://www.google.com/s2/favicons?domain=kaayaayurveda.com&sz=256" data-domain="kaayaayurveda.com" alt="Kaaya Ayurveda"
+                             class="w-20 h-20 object-contain drop-shadow-lg" style="image-rendering:auto;"
+                             onerror="if(!this.dataset.step){this.dataset.step='1';this.src='https://logo.clearbit.com/'+this.dataset.domain;}else if(this.dataset.step==='1'){this.dataset.step='2';this.src='https://icons.duckduckgo.com/ip3/'+this.dataset.domain+'.ico';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                             loading="lazy">
+                        <div class="hidden w-20 h-20 items-center justify-center rounded-2xl text-white font-bold text-3xl">KA</div>
+                        <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-500/30 text-green-200 border border-green-400/30">D2C</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white mb-3">Kaaya Ayurveda</h3>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Launched Meta campaigns for Sri Lankan Ayurvedic healthcare brand targeting wellness-focused audiences internationally.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-600 dark:text-green-400">3.2x ROAS</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">CTR +45%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Harold Electricals -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal project-card" style="transition-delay: 100ms;">
+                    <div class="relative h-32 overflow-hidden flex items-center justify-center" style="background:linear-gradient(135deg,#92400e,#d97706);">
+                        <img src="https://www.google.com/s2/favicons?domain=haroldelectricals.com&sz=256" data-domain="haroldelectricals.com" alt="Harold Electricals"
+                             class="w-20 h-20 object-contain drop-shadow-lg" style="image-rendering:auto;"
+                             onerror="if(!this.dataset.step){this.dataset.step='1';this.src='https://logo.clearbit.com/'+this.dataset.domain;}else if(this.dataset.step==='1'){this.dataset.step='2';this.src='https://icons.duckduckgo.com/ip3/'+this.dataset.domain+'.ico';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                             loading="lazy">
+                        <div class="hidden w-20 h-20 items-center justify-center rounded-2xl text-white font-bold text-3xl">HE</div>
+                        <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-yellow-500/30 text-yellow-200 border border-yellow-400/30">D2C</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white mb-3">Harold Electricals</h3>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Drove Google Shopping & Display campaigns for lighting and décor brand, optimizing product feeds and bidding strategies.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-600 dark:text-green-400">4.1x ROAS</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">Revenue +60% YoY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Madames -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal project-card" style="transition-delay: 150ms;">
+                    <div class="relative h-32 overflow-hidden flex items-center justify-center" style="background:linear-gradient(135deg,#9d174d,#be185d);">
+                        <img src="https://www.google.com/s2/favicons?domain=madames.in&sz=256" data-domain="madames.in" alt="Madames"
+                             class="w-20 h-20 object-contain drop-shadow-lg" style="image-rendering:auto;"
+                             onerror="if(!this.dataset.step){this.dataset.step='1';this.src='https://logo.clearbit.com/'+this.dataset.domain;}else if(this.dataset.step==='1'){this.dataset.step='2';this.src='https://icons.duckduckgo.com/ip3/'+this.dataset.domain+'.ico';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                             loading="lazy">
+                        <div class="hidden w-20 h-20 items-center justify-center rounded-2xl text-white font-bold text-3xl">MD</div>
+                        <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-pink-500/30 text-pink-200 border border-pink-400/30">D2C</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white mb-3">Madames</h3>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Ran Instagram & Meta performance campaigns for women's fashion brand, using UGC creatives and lookalike audiences.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-600 dark:text-green-400">3.5x ROAS</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">CPA -28%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: ZoomYatra -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal project-card" style="transition-delay: 200ms;">
+                    <div class="relative h-32 overflow-hidden flex items-center justify-center" style="background:linear-gradient(135deg,#0c4a6e,#0369a1);">
+                        <img src="https://www.google.com/s2/favicons?domain=www.zoomyatra.com&sz=256" data-domain="www.zoomyatra.com" alt="ZoomYatra"
+                             class="w-20 h-20 object-contain drop-shadow-lg" style="image-rendering:auto;"
+                             onerror="if(!this.dataset.step){this.dataset.step='1';this.src='https://logo.clearbit.com/'+this.dataset.domain;}else if(this.dataset.step==='1'){this.dataset.step='2';this.src='https://icons.duckduckgo.com/ip3/'+this.dataset.domain+'.ico';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                             loading="lazy">
+                        <div class="hidden w-20 h-20 items-center justify-center rounded-2xl text-white font-bold text-3xl">ZY</div>
+                        <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-500/30 text-sky-200 border border-sky-400/30">B2C</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white mb-3">ZoomYatra</h3>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Executed lead generation campaigns for travel brand using Google Search & Meta with geo-targeted audience segmentation.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-600 dark:text-green-400">3,200+ Leads</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">CPL -38%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: TapBizCard -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal project-card" style="transition-delay: 250ms;">
+                    <div class="relative h-32 overflow-hidden flex items-center justify-center" style="background:linear-gradient(135deg,#3730a3,#4f46e5);">
+                        <img src="https://www.google.com/s2/favicons?domain=www.tapbizcard.com&sz=256" data-domain="www.tapbizcard.com" alt="TapBizCard"
+                             class="w-20 h-20 object-contain drop-shadow-lg" style="image-rendering:auto;"
+                             onerror="if(!this.dataset.step){this.dataset.step='1';this.src='https://logo.clearbit.com/'+this.dataset.domain;}else if(this.dataset.step==='1'){this.dataset.step='2';this.src='https://icons.duckduckgo.com/ip3/'+this.dataset.domain+'.ico';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                             loading="lazy">
+                        <div class="hidden w-20 h-20 items-center justify-center rounded-2xl text-white font-bold text-3xl">TB</div>
+                        <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-500/30 text-indigo-200 border border-indigo-400/30">B2B + B2C</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white mb-3">TapBizCard</h3>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Ran dual B2B & B2C campaigns for NFC smart card brand, targeting professionals on LinkedIn and consumers on Meta.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-600 dark:text-green-400">1,800+ Leads</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">LinkedIn CPL: ₹180</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: MLAI Solution -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal project-card" style="transition-delay: 300ms;">
+                    <div class="relative h-32 overflow-hidden flex items-center justify-center" style="background:linear-gradient(135deg,#155e75,#0e7490);">
+                        <img src="https://www.google.com/s2/favicons?domain=mlaisolution.com&sz=256" data-domain="mlaisolution.com" alt="MLAI Solution"
+                             class="w-20 h-20 object-contain drop-shadow-lg" style="image-rendering:auto;"
+                             onerror="if(!this.dataset.step){this.dataset.step='1';this.src='https://logo.clearbit.com/'+this.dataset.domain;}else if(this.dataset.step==='1'){this.dataset.step='2';this.src='https://icons.duckduckgo.com/ip3/'+this.dataset.domain+'.ico';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                             loading="lazy">
+                        <div class="hidden w-20 h-20 items-center justify-center rounded-2xl text-white font-bold text-3xl">ML</div>
+                        <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-teal-500/30 text-teal-200 border border-teal-400/30">B2B</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white mb-3">MLAI Solution</h3>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Executed B2B lead generation for Visitor Management System SaaS using Google Search and LinkedIn targeting decision makers.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-600 dark:text-green-400">520+ Demo Requests</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">CPD: ₹320</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8: Network Net -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal project-card" style="transition-delay: 350ms;">
+                    <div class="relative h-32 overflow-hidden flex items-center justify-center" style="background:linear-gradient(135deg,#1e3a8a,#1d4ed8);">
+                        <img src="https://www.google.com/s2/favicons?domain=www.networknetindia.com&sz=256" data-domain="www.networknetindia.com" alt="Network Net"
+                             class="w-20 h-20 object-contain drop-shadow-lg" style="image-rendering:auto;"
+                             onerror="if(!this.dataset.step){this.dataset.step='1';this.src='https://logo.clearbit.com/'+this.dataset.domain;}else if(this.dataset.step==='1'){this.dataset.step='2';this.src='https://icons.duckduckgo.com/ip3/'+this.dataset.domain+'.ico';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                             loading="lazy">
+                        <div class="hidden w-20 h-20 items-center justify-center rounded-2xl text-white font-bold text-3xl">NN</div>
+                        <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-500/30 text-blue-200 border border-blue-400/30">B2C</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white mb-3">Network Net</h3>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Managed EdTech lead generation campaigns using Google & Meta, targeting students for professional networking courses.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-600 dark:text-green-400">2.5x ROAS</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">Organic +60%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9: Manthan Experts -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal project-card" style="transition-delay: 400ms;">
+                    <div class="relative h-32 overflow-hidden flex items-center justify-center" style="background:linear-gradient(135deg,#9a3412,#c2410c);">
+                        <img src="https://www.google.com/s2/favicons?domain=www.manthanexperts.com&sz=256" data-domain="www.manthanexperts.com" alt="Manthan Experts"
+                             class="w-20 h-20 object-contain drop-shadow-lg" style="image-rendering:auto;"
+                             onerror="if(!this.dataset.step){this.dataset.step='1';this.src='https://logo.clearbit.com/'+this.dataset.domain;}else if(this.dataset.step==='1'){this.dataset.step='2';this.src='https://icons.duckduckgo.com/ip3/'+this.dataset.domain+'.ico';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                             loading="lazy">
+                        <div class="hidden w-20 h-20 items-center justify-center rounded-2xl text-white font-bold text-3xl">ME</div>
+                        <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-orange-500/30 text-orange-200 border border-orange-400/30">B2C</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white mb-3">Manthan Experts</h3>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Managed 12+ cross-platform lead gen campaigns. Implemented smart bidding strategies and A/B tested 40+ ad creatives.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-600 dark:text-green-400">Leads +40%</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">ROI +20%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10: Ward Al Sham -->
+                <div class="glass-card rounded-2xl overflow-hidden group reveal project-card" style="transition-delay: 450ms;">
+                    <div class="relative h-32 overflow-hidden flex items-center justify-center" style="background:linear-gradient(135deg,#881337,#be123c);">
+                        <img src="https://www.google.com/s2/favicons?domain=sharjahblindcurtainstore.com&sz=256" data-domain="sharjahblindcurtainstore.com" alt="Ward Al Sham"
+                             class="w-20 h-20 object-contain drop-shadow-lg" style="image-rendering:auto;"
+                             onerror="if(!this.dataset.step){this.dataset.step='1';this.src='https://logo.clearbit.com/'+this.dataset.domain;}else if(this.dataset.step==='1'){this.dataset.step='2';this.src='https://icons.duckduckgo.com/ip3/'+this.dataset.domain+'.ico';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}"
+                             loading="lazy">
+                        <div class="hidden w-20 h-20 items-center justify-center rounded-2xl text-white font-bold text-3xl">WS</div>
+                        <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-rose-500/30 text-rose-200 border border-rose-400/30">D2C</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold group-hover:text-primary transition text-slate-800 dark:text-white mb-3">Ward Al Sham</h3>
+                        <p class="text-slate-600 dark:text-gray-400 text-sm mb-4">Ran Meta & Google campaigns for UAE curtains & furniture brand, with geo-targeted campaigns across Sharjah & Dubai.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-600 dark:text-green-400">2,500+ Leads</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-primary/20 text-primary">CPA -35%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- end grid -->
+        </div>
+    </section>
+    <!-- END: Projects Section -->
 
     <!-- Experience Section (Replaced Projects) -->
     <section id="experience" class="py-24 relative z-10 bg-slate-50/50 dark:bg-darker/50">
@@ -764,7 +958,7 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
                         </div>
                         <div>
                             <h4 class="text-lg font-bold">Email</h4>
-                            <a href="mailto:danishshekh8947@gmail.com" class="text-slate-500 dark:text-gray-400 hover:text-primary transition">danishshekh8947@gmail.com</a>
+                            <a href="/cdn-cgi/l/email-protection#f490959a9d879c879c919f9ccccdc0c3b49399959d98da979b99" class="text-slate-500 dark:text-gray-400 hover:text-primary transition"><span class="__cf_email__" data-cfemail="c9ada8a7a0baa1baa1aca2a1f1f0fdfe89aea4a8a0a5e7aaa6a4">[email&#160;protected]</span></a>
                         </div>
                     </div>
                     
@@ -824,7 +1018,7 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
                     <div class="flex gap-4">
                         <!-- Small Social Links -->
                         <a href="https://www.linkedin.com/in/mohd-danish-a60703279" target="_blank" class="text-slate-400 hover:text-primary transition"><i class="fa-brands fa-linkedin text-lg"></i></a>
-                        <a href="mailto:danishshekh8947@gmail.com" class="text-slate-400 hover:text-primary transition"><i class="fa-solid fa-envelope text-lg"></i></a>
+                        <a href="/cdn-cgi/l/email-protection#6f0b0e01061c071c070a040757565b582f08020e0603410c0002" class="text-slate-400 hover:text-primary transition"><i class="fa-solid fa-envelope text-lg"></i></a>
                     </div>
                 </div>
 
@@ -835,6 +1029,7 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
                         <li><a href="#home" class="text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> Home</a></li>
                         <li><a href="#about" class="text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> About</a></li>
                         <li><a href="#platforms" class="text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> Platforms</a></li>
+                        <li><a href="#projects" class="text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> Projects</a></li>
                         <li><a href="#experience" class="text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition flex items-center gap-2 group"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> Experience</a></li>
                     </ul>
                 </div>
@@ -872,7 +1067,7 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // --- Dynamic Year ---
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
@@ -1070,5 +1265,6 @@ src="https://www.facebook.com/tr?id=1233949338901358&ev=PageView&noscript=1"
 
         if(dashboard) observer.observe(dashboard);
     </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
