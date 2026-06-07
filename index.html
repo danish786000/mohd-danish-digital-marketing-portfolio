@@ -8,7 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>emailjs.init('p-u_K6QFx_EJCQqvJ');</script>
+    <script>
+        window.addEventListener('load', function() {
+            emailjs.init({ publicKey: 'p-u_K6QFx_EJCQqvJ' });
+        });
+    </script>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
@@ -1233,7 +1237,14 @@
         function submitForm(event, formId) {
             event.preventDefault();
             const form = document.getElementById(formId);
-            const btnId = formId === 'hero-contact-form' ? 'hero-submit-btn' : 'contact-submit-btn';
+
+            // Correctly map each form to its submit button
+            let btnId;
+            if (formId === 'hero-contact-form') {
+                btnId = 'hero-submit-btn';
+            } else {
+                btnId = 'contact-submit-btn';
+            }
             const btn = document.getElementById(btnId);
 
             // Button loading state
@@ -1241,12 +1252,12 @@
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
 
             emailjs.sendForm('danish_shekh_786', 'template_u8t7kih', form)
-                .then(() => {
+                .then(function() {
                     // Redirect to thank you page on success
                     window.location.href = 'thankyou.html';
-                })
-                .catch((error) => {
-                    console.error('EmailJS error:', error);
+                }, function(error) {
+                    console.error('EmailJS error status:', error.status);
+                    console.error('EmailJS error text:', error.text);
                     btn.disabled = false;
                     btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Get Free Consultation';
                     alert('Something went wrong. Please try again or email directly at danishshekh8947@gmail.com');
